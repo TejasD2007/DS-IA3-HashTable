@@ -2,6 +2,11 @@
 #include <iostream>
 using namespace std;
 
+int hashFunction(int key)
+{
+    return key % 23;
+}
+
 int main()
 {
     int marks[20] = {
@@ -12,6 +17,13 @@ int main()
     };
 
     cout << "Personalized Student Marks:" << endl;
+
+    cout << "\nHash Indices:" << endl;
+
+        for(int i = 0; i < 20; i++)
+            {
+              cout << marks[i] << " -> " << hashFunction(marks[i]) << endl;
+            }
 
     for(int i = 0; i < 20; i++)
     {
