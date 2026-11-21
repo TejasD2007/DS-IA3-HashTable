@@ -32,5 +32,41 @@ int main()
 
     cout << endl;
 
+    int table[23];
+
+for(int i = 0; i < 23; i++)
+{
+    table[i] = -1;
+}
+
+cout << "\nBasic Hash Table Insertion:" << endl;
+
+for(int i = 0; i < 20; i++)
+{
+    int index = hashFunction(marks[i]);
+
+    if(table[index] != -1)
+    {
+        cout << "Collision at index " << index
+             << " while inserting " << marks[i] << endl;
+    }
+
+    table[index] = marks[i];
+}
+
+    cout << "\nTable After Basic Insertion:" << endl;
+
+    for(int i = 0; i < 23; i++)
+    {
+        cout << i << " : ";
+
+        if(table[i] == -1)
+            cout << "EMPTY";
+        else
+            cout << table[i];
+
+        cout << endl;
+    }
+
     return 0;
 }
