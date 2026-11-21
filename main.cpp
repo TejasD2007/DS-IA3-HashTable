@@ -41,14 +41,18 @@ for(int i = 0; i < 23; i++)
 
 cout << "\nBasic Hash Table Insertion:" << endl;
 
+cout << "\nLinear Probing Insertion:" << endl;
+
 for(int i = 0; i < 20; i++)
 {
     int index = hashFunction(marks[i]);
 
-    if(table[index] != -1)
+    while(table[index] != -1)
     {
         cout << "Collision at index " << index
-             << " while inserting " << marks[i] << endl;
+             << " for " << marks[i] << endl;
+
+        index = (index + 1) % 23;
     }
 
     table[index] = marks[i];
