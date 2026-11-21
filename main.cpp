@@ -1,3 +1,8 @@
+// Data Structures Internal Activity 3
+// PRN: [Your PRN]
+// Scenario: Student Marks
+// Hash Method: Division Method
+// Collision Handling: Linear Probing
 
 #include <iostream>
 using namespace std;
@@ -39,8 +44,6 @@ for(int i = 0; i < 23; i++)
     table[i] = -1;
 }
 
-cout << "\nBasic Hash Table Insertion:" << endl;
-
 cout << "\nLinear Probing Insertion:" << endl;
 
 for(int i = 0; i < 20; i++)
@@ -58,7 +61,7 @@ for(int i = 0; i < 20; i++)
     table[index] = marks[i];
 }
 
-    cout << "\nTable After Basic Insertion:" << endl;
+    cout << "\nFinal Hash Table:" << endl;
 
     for(int i = 0; i < 23; i++)
     {
